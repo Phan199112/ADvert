@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="nav_height">44dp</dimen>
+    <dimen name="btn_height">40dp</dimen>
+
+    <dimen name="nav_font">20sp</dimen>
+    <dimen name="statusbar_height">24dp</dimen>
+</resources>

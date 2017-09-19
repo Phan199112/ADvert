@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.international.advert.HomeActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:id="@+id/iv_anim"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/nav_height"
+        android:layout_marginTop="@dimen/statusbar_height"
+        android:layout_centerHorizontal="true"
+        android:text="ADvert"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="@dimen/nav_font"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:background="@drawable/btn_normal"
+            android:text="via FORUM"
+            android:textColor="#005557"
+            android:id="@+id/btn_forum"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:background="@drawable/btn_normal"
+            android:text="via BLUETOOTH"
+            android:textColor="#005557"
+            android:layout_marginTop="16dp"
+            android:id="@+id/btn_ble"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:background="@drawable/btn_normal"
+            android:text="Friends"
+            android:textColor="#005557"
+            android:layout_marginTop="16dp"
+            android:id="@+id/btn_friends"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:background="@drawable/btn_normal"
+            android:text="Scan QRcode"
+            android:textColor="#005557"
+            android:layout_marginTop="64dp"
+            android:id="@+id/btn_scan"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textColor="#005557"
+        android:textSize="14sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="32dp"
+        android:text="Log out"
+        android:id="@+id/tv_logout"/>
+
+</RelativeLayout>
