@@ -47,7 +47,10 @@ public class SplashActivity extends AppCompatActivity {
             Manifest.permission.NFC,
             Manifest.permission.VIBRATE,
             Manifest.permission.READ_EXTERNAL_STORAGE,
-            Manifest.permission.WRITE_EXTERNAL_STORAGE
+            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.ACCESS_COARSE_LOCATION,
+
     };
 
     @Override
@@ -157,7 +160,7 @@ public class SplashActivity extends AppCompatActivity {
                     Toast.makeText(
                             this,
                             "Cannot continue running ADvert without all required permissions.",
-                            Toast.LENGTH_SHORT
+                            Toast.LENGTH_LONG
                     ).show();
 
                     finish();

@@ -30,6 +30,20 @@
         android:src="@drawable/img_arrow"
         android:id="@+id/iv_back"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/nav_height"
+        android:background="@drawable/img_button"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="Scan"
+        android:textColor="#fff"
+        android:textSize="@dimen/nav_font"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:src="@drawable/img_plus"
+        android:id="@+id/iv_scan"/>
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
