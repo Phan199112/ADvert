@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.international.advert.BleChatActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:id="@+id/iv_anim"/>
+
+    <ImageView
+        android:layout_width="@dimen/nav_height"
+        android:layout_height="@dimen/nav_height"
+        android:background="@drawable/img_button"
+        android:src="@drawable/img_arrow"
+        android:id="@+id/iv_back"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/nav_height"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:textSize="16sp"
+        android:layout_toRightOf="@+id/iv_back"
+        android:id="@+id/tv_status"
+        />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:layout_below="@+id/iv_back"
+        android:dividerHeight="3dp"
+        android:divider="#00ffffff"
+        android:layout_above="@+id/ll_inbox"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        android:id="@+id/lv_ble"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/ll_inbox"
+        android:layout_alignParentBottom="true"
+        android:weightSum="1"
+        android:padding="8dp">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="50dp"
+            android:maxLines="5"
+            android:textColor="#005557"
+            android:textSize="16sp"
+            android:hint="type message here"
+            android:paddingLeft="4dp"
+            android:background="@drawable/btn_w_t_r"
+            android:id="@+id/et_message"/>
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="0.2"
+            android:layout_gravity="center_vertical"
+            android:textColor="#fff"
+            android:background="@drawable/img_button"
+            android:text="Send"
+            android:layout_marginLeft="2dp"
+            android:textStyle="bold|italic"
+            android:id="@+id/btn_send"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -12,31 +12,168 @@
         android:scaleType="fitXY"
         android:id="@+id/iv_anim"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/nav_height"
-        android:layout_centerHorizontal="true"
-        android:text="Bluetooth Devices"
-        android:textColor="#fff"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textSize="@dimen/nav_font"
-        />
-
-    <ImageView
-        android:layout_width="@dimen/nav_height"
-        android:layout_height="@dimen/nav_height"
-        android:background="@drawable/img_button"
-        android:src="@drawable/img_arrow"
-        android:id="@+id/iv_back"/>
-
-    <ListView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="8dp"
-        android:layout_below="@+id/iv_back"
-        android:dividerHeight="3dp"
-        android:divider="#00ffffff"
-        android:id="@+id/lv_ble"/>
+        android:id="@+id/rl_list">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/nav_height"
+            android:layout_centerHorizontal="true"
+            android:text="Devices"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="@dimen/nav_font"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/nav_height"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_toLeftOf="@+id/iv_timer"
+            android:text="Scan"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:background="@drawable/img_button"
+            android:id="@+id/tv_scan"
+            />
+
+        <ImageView
+            android:layout_width="@dimen/nav_height"
+            android:layout_height="@dimen/nav_height"
+            android:background="@drawable/img_button"
+            android:src="@drawable/img_arrow"
+            android:id="@+id/iv_back"/>
+
+        <ImageView
+            android:layout_width="@dimen/nav_height"
+            android:layout_height="@dimen/nav_height"
+            android:background="@drawable/img_button"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/img_timer"
+            android:id="@+id/iv_timer"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paired Devices"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:layout_below="@+id/iv_back"
+            android:padding="4dp"
+            android:id="@+id/tv_pair"
+            />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_below="@+id/tv_pair"
+            android:dividerHeight="3dp"
+            android:divider="#00ffffff"
+            android:id="@+id/lv_pair"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pair Available Devices"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:layout_below="@+id/lv_pair"
+            android:padding="4dp"
+            android:id="@+id/tv_unpair"
+            />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_below="@+id/tv_unpair"
+            android:dividerHeight="3dp"
+            android:divider="#00ffffff"
+            android:id="@+id/lv_unpair"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rl_chat">
+
+        <ImageView
+            android:layout_width="@dimen/nav_height"
+            android:layout_height="@dimen/nav_height"
+            android:background="@drawable/img_button"
+            android:src="@drawable/img_arrow"
+            android:id="@+id/iv_back1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/nav_height"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textSize="16sp"
+            android:layout_toRightOf="@+id/iv_back1"
+            android:id="@+id/tv_status"
+            />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:layout_below="@+id/iv_back1"
+            android:dividerHeight="3dp"
+            android:divider="#00ffffff"
+            android:layout_above="@+id/ll_inbox"
+            android:stackFromBottom="true"
+            android:transcriptMode="alwaysScroll"
+            android:id="@+id/lv_ble"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/ll_inbox"
+            android:layout_alignParentBottom="true"
+            android:weightSum="1"
+            android:padding="8dp">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="50dp"
+                android:maxLines="5"
+                android:textColor="#005557"
+                android:textSize="16sp"
+                android:hint="type message here"
+                android:paddingLeft="4dp"
+                android:background="@drawable/btn_w_t_r"
+                android:id="@+id/et_message"/>
+
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="0.2"
+                android:layout_gravity="center_vertical"
+                android:textColor="#fff"
+                android:background="@drawable/img_button"
+                android:text="Send"
+                android:layout_marginLeft="2dp"
+                android:textStyle="bold|italic"
+                android:id="@+id/btn_send"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </RelativeLayout>
